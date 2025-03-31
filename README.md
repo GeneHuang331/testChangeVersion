@@ -1,0 +1,2 @@
+# testChangeVersion
+測試提交記錄到master時自動更新版號
