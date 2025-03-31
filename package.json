@@ -13,8 +13,8 @@
   },
   "husky": {
     "hooks": {
-      "post-merge": "npm version patch --no-git-tag-version",
-      "pre-push": "npm version patch --no-git-tag-version"
+      "post-merge": "if [ $(git rev-parse --abbrev-ref HEAD) = 'main' ]; then npm version patch --no-git-tag-version; fi",
+      "pre-push": "if [ $(git rev-parse --abbrev-ref HEAD) = 'main' ]; then npm version patch --no-git-tag-version; fi"
     }
   }
 }
