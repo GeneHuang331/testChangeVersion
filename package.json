@@ -8,13 +8,13 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "husky": "^9.1.7"
-  },
   "husky": {
     "hooks": {
-      "post-merge": "if [ $(git rev-parse --abbrev-ref HEAD) = 'main' ]; then npm version patch --no-git-tag-version; fi",
-      "pre-push": "if [ $(git rev-parse --abbrev-ref HEAD) = 'main' ]; then npm version patch --no-git-tag-version; fi"
+      "pre-push": "if [ $(git rev-parse --abbrev-ref HEAD) = 'main' ]; then npm version minor --no-git-tag-version; fi"
     }
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
+ 
 }
